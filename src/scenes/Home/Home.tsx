@@ -1,5 +1,5 @@
 import { SelectedPage } from '@/shared/type'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import ActionButton from '@/components/ActionButton'
 import HomePageText from "@/assets/HomePageText.png"
@@ -9,11 +9,6 @@ import SponsorForbes from "@/assets/SponsorForbes.png"
 import SponsorFortune from "@/assets/SponsorFortune.png"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { motion } from 'framer-motion'
-
-
-
-
-
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void

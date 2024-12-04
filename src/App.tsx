@@ -3,6 +3,7 @@ import Navbar from "./scenes/Navbar/Navbar";
 import { SelectedPage } from "./shared/type";
 import Home from "./scenes/Home/Home";
 import Benefits from "./scenes/Benefits/Benefits";
+import OurClasses from "./scenes/OurClasses/OurClasses";
 
 
 const  App: FC = () => {
@@ -28,6 +29,7 @@ const  App: FC = () => {
         <Navbar isTopOfPage={isTopOfPage}  selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         <Home setSelectedPage={setSelectedPage}/>
         <Benefits setSelectedPage={setSelectedPage} />
+        <OurClasses setSelectedPage={setSelectedPage}/>
       </div>
     </>
   );

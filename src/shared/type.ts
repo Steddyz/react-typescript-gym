@@ -11,3 +11,9 @@ export interface BenefitType {
   description: string,
 
 }
+
+export interface ContactUsType {
+  name: string,
+  image: string,
+  description?: string
+}

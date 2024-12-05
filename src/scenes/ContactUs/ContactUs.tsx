@@ -11,7 +11,7 @@ type Props = {
 
 const ContactUs: FC<Props> = ({ setSelectedPage }) => {
 
-    const inputStyles = `mt-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
+    const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
 
     const {
         register,
@@ -129,10 +129,26 @@ const ContactUs: FC<Props> = ({ setSelectedPage }) => {
                         </button>
                     </form>
                 </motion.div>
+
+                <motion.div 
+                className='relative mt-16 basis-2/5 md:mt-0'
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{delay: 0.2, duration: 0.5}}
+                variants={{
+                    hidden: {opacity: 0, y: 50},
+                    visible: {opacity: 1, y: 0}
+                }}
+                >
+                    <div className='md:before:content-evolvetext before:z-[-1] w-full before:absolute before:-bottom-20 before:-right-10'>
+                        <img className='w-full' src={ContactUsPageGraphic} alt="contactus-image" />
+                    </div>
+                </motion.div>
             </div>
         </motion.div>
     </section>
   )
 }
 
-export default ContactUs
+export default ContactUs;
